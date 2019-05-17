@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://jhawins.github.io/Circular-Standing-Wave-Visualization/build/",
+  "homepage": "https://jhawins.github.io/Circular-Standing-Wave-Visualization/",
   "dependencies": {
     "konva": "2.0.3",
     "prop-types": "15.6.1",
