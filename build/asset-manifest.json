@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/build/static/js/main.55b87195.chunk.js",
-    "main.js.map": "/build/static/js/main.55b87195.chunk.js.map",
-    "runtime~main.js": "/build/static/js/runtime~main.9df7376b.js",
-    "runtime~main.js.map": "/build/static/js/runtime~main.9df7376b.js.map",
-    "static/js/2.7c1f1192.chunk.js": "/build/static/js/2.7c1f1192.chunk.js",
-    "static/js/2.7c1f1192.chunk.js.map": "/build/static/js/2.7c1f1192.chunk.js.map",
-    "index.html": "/build/index.html",
-    "precache-manifest.d27fed85dceee7f898031dd9e35f1b7e.js": "/build/precache-manifest.d27fed85dceee7f898031dd9e35f1b7e.js",
-    "service-worker.js": "/build/service-worker.js"
+    "main.js": "/Circular-Standing-Wave-Visualization/build/static/js/main.55b87195.chunk.js",
+    "main.js.map": "/Circular-Standing-Wave-Visualization/build/static/js/main.55b87195.chunk.js.map",
+    "runtime~main.js": "/Circular-Standing-Wave-Visualization/build/static/js/runtime~main.d638ae80.js",
+    "runtime~main.js.map": "/Circular-Standing-Wave-Visualization/build/static/js/runtime~main.d638ae80.js.map",
+    "static/js/2.7c1f1192.chunk.js": "/Circular-Standing-Wave-Visualization/build/static/js/2.7c1f1192.chunk.js",
+    "static/js/2.7c1f1192.chunk.js.map": "/Circular-Standing-Wave-Visualization/build/static/js/2.7c1f1192.chunk.js.map",
+    "index.html": "/Circular-Standing-Wave-Visualization/build/index.html",
+    "precache-manifest.2e0be1d74f3b9ead3c162e584d82f2f0.js": "/Circular-Standing-Wave-Visualization/build/precache-manifest.2e0be1d74f3b9ead3c162e584d82f2f0.js",
+    "service-worker.js": "/Circular-Standing-Wave-Visualization/build/service-worker.js"
   }
 }
