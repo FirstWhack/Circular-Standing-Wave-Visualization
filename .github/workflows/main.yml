@@ -1,35 +1,28 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+name: S3 Deploy
+on: [push]
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  run:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
-      - name: S3 Deploy
-        # You may pin to the exact commit or the version.
-        # uses: Reggionick/s3-deploy@d78e6b5a588e326e4b1afb9b33df2ce28929e5e1
-        uses: Reggionick/s3-deploy@v3.1.0
-        with:
-          folder: /dist
-          bucket: cf-simple-s3-origin-jhawins-683615091621
-          bucket-region: us-east-1
-          dist-id: E3I4FJOX2RYP9D
-          # Upload files with private ACL, needed for S3 static website hosting
-          private: true
+        - uses: actions/checkout@v2
+
+        - name: Install dependencies
+          run: npm install
+
+        - name: Build
+          run: npm run build
+
+        - name: Deploy
+          uses: reggionick/s3-deploy@v3
+          with:
+            folder: build
+            bucket: ${{ secrets.S3_BUCKET }}
+            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+            dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+            invalidation: /
+            delete-removed: true
+            no-cache: true
+            private: true
