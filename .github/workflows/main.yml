@@ -16,7 +16,9 @@ jobs:
           run: npm run build
           
         - name: Move Files
-          run: mv ./build ./build/Circular-Standing-Wave-Visualization
+          run: |
+            mkdir ./build/Circular-Standing-Wave-Visualization
+            mv ./build/* ./build/Circular-Standing-Wave-Visualization
 
         - name: Deploy
           uses: reggionick/s3-deploy@v3
