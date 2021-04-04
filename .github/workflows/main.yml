@@ -17,8 +17,9 @@ jobs:
           
         - name: Move Files
           run: |
-            mkdir ./build/Circular-Standing-Wave-Visualization
-            mv ./build/* ./build/Circular-Standing-Wave-Visualization
+            mkdir ./Circular-Standing-Wave-Visualization
+            mv ./build/* ./Circular-Standing-Wave-Visualization
+            mv ./Circular-Standing-Wave-Visualization ./build
 
         - name: Deploy
           uses: reggionick/s3-deploy@v3
